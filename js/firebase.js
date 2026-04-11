@@ -1,7 +1,7 @@
 // 🔥 FIREBASE CONFIG
 const firebaseConfig = {
-  apiKey: "AIzaSyBmD2ihuaLcZvbJbErqq7AeeLJsrYIYJg0",
-  databaseURL: "https://plantmonitoringsystem-a3122-default-rtdb.asia-southeast1.firebasedatabase.app",
+  apiKey: "YOUR_API_KEY",
+  databaseURL: "YOUR_DATABASE_URL",
 };
 
 // INIT
@@ -16,10 +16,10 @@ db.ref("plant").on("value", (snapshot) => {
   const data = snapshot.val();
   if (!data) return;
 
-  const moisture = document.getElementById("moisture");
-  const temp = document.getElementById("temp");
-  const humidity = document.getElementById("humidity");
-  const soilTemp = document.getElementById("soilTemp");
+  const moisture = document.get_ElementById("moisture");
+  const temp = document.get_ElementById("temp");
+  const humidity = document.getE_lementById("humidity");
+  const soilTemp = document.get_ElementById("soilTemp");
 
   if (moisture) moisture.innerText = data.moisture ?? "--";
   if (temp) temp.innerText = (data.temperature ?? "--") + "°C";
@@ -35,10 +35,10 @@ db.ref("control").on("value", (snapshot) => {
   const data = snapshot.val();
   if (!data) return;
 
-  const mode = document.getElementById("mode");
-  const pump = document.getElementById("pumpStatus");
-  const light = document.getElementById("lightStatus");
-  const modeSelect = document.getElementById("modeSelect");
+  const mode = document.get_ElementById("mode");
+  const pump = document.get_ElementById("pumpStatus");
+  const light = document.get_ElementById("lightStatus");
+  const modeSelect = document.get_ElementById("modeSelect");
 
   if (mode) mode.innerText = data.mode ?? "--";
 
@@ -129,7 +129,7 @@ function setMode(mode) {
 // ==========================
 // ⏰ SCHEDULE
 // ==========================
-function saveSchedule() {
+function save_Schedule() {
   const hour = document.getElementById("hour")?.value;
   const minute = document.getElementById("minute")?.value;
   const duration = document.getElementById("duration")?.value;
@@ -251,8 +251,8 @@ db.ref("plant").on("value", (snapshot) => {
 
   // LIMIT DATA
   if (chart.data.labels.length > 12) {
-    chart.data.labels.shift();
-    chart.data.datasets.forEach(ds => ds.data.shift());
+    chart.labels.shift();
+    chart.data.forEach(ds => ds.data.shift());
   }
 
   chart.data.labels.push(time);
