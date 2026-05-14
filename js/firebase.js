@@ -1,7 +1,7 @@
 // 🔥 FIREBASE CONFIG
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  databaseURL: "YOUR_DATABASE_URL",
+  apiKey: "AIzaSyBmD2ihuaLcZvbJbErqq7AeeLJsrYIYJg0",
+  databaseURL: "https://plantmonitoringsystem-a3122-default-rtdb.asia-southeast1.firebasedatabase.app",
 };
 
 // INIT
